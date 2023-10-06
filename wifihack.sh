@@ -1,4 +1,3 @@
-GNU nano 7.2                                         wifihack.sh
 clear
 echo -e "\033[1;91m[no runing of termux](×) "
 
