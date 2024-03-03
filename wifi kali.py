@@ -2,7 +2,8 @@ import subprocess
 
 data = subprocess.check_output(['sudo', 'iw', 'wlan0', 'scan']).decode('utf-8').split('\n')
 
-profiles = [i.split(":")[1][1:-1] for i in data if "SSID" in i]
+profiles = [i.split(":")[1][1:1] for i in data if "SSID" in i and len(i.split(":")) > 1]
+
 
 print("\n{:<30}| {:<}".format("اسم الواي فاي", "كلمة المرور"))
 print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
